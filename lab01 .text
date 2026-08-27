@@ -1,0 +1,31 @@
+Toán và tích chập => Bản chất của nó là trượt một ma trận ( kernel hay filter ) qua từng pixel của ảnh để tính độ thay đổi 
+đột ngột của độ sáng => khi đó ta có thể tìm ra vùng biên 
+Ví dụ : Ta có một bức ảnh mờ hoặc bị nhiễu hạt => Làm sao để làm mịn nó 
+?
+giả sử bạn có 1 ma trận 
+[ 10 10 10 
+20 255 12
+10 20 10 ]
+bạn có thể thấy tự dưng có 1 điểm 255 ơer trung tâm => gây ra do điểm này bị nhiễu => bạn sẽ xử lý   
+Các phương pháp lọc chính 
+ví dụ 
+lọc trung vị -> 
+[ 10 10 10 
+20 255 12
+10 20 10 ]
+ta sẽ liệt kê các giá trị ra và tìm giá trị max và xóa nó đi  => [10 10 10
+20 20 12
+10 20 10 ]=> tìm min và cộng lại cho mọi vị trí => 10+10+10+20+20+12+10+20+10 = 122 / 9 = 13.55     
+
+lọc trung vị (filter median )
+lọc gauss , sẽ trượt kernel qua từng điểm và tính tổng có trọng số  
+bằng cách 
+lọc kernel 
+là 1 ma trận điểm 1/16 x [ 1 2 1 
+                     2 4 2 
+                     1 2 1 ]
+- Lọc kernel sẽ làm mịn ảnh 
+- lọc gaussian 
+tại sao lại là 1/16 vì 1+2+1+2+4+2 + 1+2+1 = 16 => khi nhân ma trận này với ma trận trọng số ban đầu sẽ 
+không làm thay đổi tổng giá trị của ảnh     
+
