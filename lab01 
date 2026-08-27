@@ -1,0 +1,3 @@
+Toán và tích chập => Bản chất của nó là trượt một ma trận ( kernel hay filter ) qua từng pixel của ảnh để tính độ thay đổi 
+đột ngột của độ sáng => khi đó ta có thể tìm ra vùng biên 
+Ví dụ : Ta có một bức ảnh mờ hoặc bị nhiễu hạt => Làm sao để làm mịn nó 
