@@ -27,5 +27,10 @@ là 1 ma trận điểm 1/16 x [ 1 2 1
 - Lọc kernel sẽ làm mịn ảnh 
 - lọc gaussian 
 tại sao lại là 1/16 vì 1+2+1+2+4+2 + 1+2+1 = 16 => khi nhân ma trận này với ma trận trọng số ban đầu sẽ 
-không làm thay đổi tổng giá trị của ảnh     
+không làm thay đổi tổng giá trị của ảnh    
+
+Lọc sobel để tìm biên => tức là sẽ lọc ảnh sao cho nó chỉ còn lại đường viền của vật thể  
+bằng cachs xét trục ox , oy để  phát hiện người , hoặc dự đoán chuyển động 
+lọc canny 
+
 
